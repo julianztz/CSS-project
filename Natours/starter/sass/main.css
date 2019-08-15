@@ -286,7 +286,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .3s; }
-  /* line 10, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_feature-box.scss */
+  /* line 11, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_feature-box.scss */
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: 1.5rem;
@@ -294,7 +294,7 @@ body {
     /*        url(../img/hero.jpg);*/
     -webkit-background-clip: text;
     color: transparent; }
-  /* line 22, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_feature-box.scss */
+  /* line 23, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_feature-box.scss */
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
@@ -382,7 +382,11 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/bg2.png);
   background-size: cover;
   /*  always fit the view window  */
-  background-position: top; }
+  transform: skewY(-5deg);
+  margin-top: -10rem; }
+  /* line 19, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+  .section-features > * {
+    transform: skewY(5deg); }
 
 /* 
 **

@@ -14,5 +14,10 @@
         url(../img/bg2.png);
     background-size: cover;
     /*  always fit the view window  */
-    background-position: top;
+//    background-position: top;
+    transform: skewY(-5deg);        // transform the whole feature section
+    & > * {
+        transform: skewY(5deg);     // transform only direct children back 
+    }
+    margin-top: -10rem;
 }
