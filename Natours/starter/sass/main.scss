@@ -1,280 +1,18 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-// 8.4 SASS：
-/* $color-background: rgba(50, 150, 200, 0.8); */
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-grey-dark: #777;
-$color-white: #fff;
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
+@import "components/button";
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    /*border and padding is no longer added to the total width or height of the box*/
-    box-sizing: inherit;        /*****inheritance*****/  
-    /*  box-sizing was not inherited; now it is by forcing  */
-}
+@import "layout/grid";
+@import "layout/header";
 
-html {
-/*    font-size: 10px;        */
-    /*  now 10px=1rem (root font size)  */
-    font-size: 62.5%;
-    /*  default: 16px
-        we want 10px(relatively), we use 10/16 here*/
-}
-
-body {
-    background-color: rgba(50, 150, 200, 0.8); 
-    font-family: "Lato", sans-serif;
-    font-weight: 400;        
-    /*  how thick  */
-/*    font-size: 16px;*/
-    line-height:1.7;
-    /*  height of each line  */
-    color: $color-grey-dark;
-/*    padding: 30px;        */
-    padding: 3rem;
-    /*  margin VS padding??  */
-    box-sizing: border-box;  
-
-}
-
-.header{
-    height: 90vh;                 
-    /*95% of the view height*/
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)), 
-/*        url(../img/hero.jpg);*/
-        url(../img/bg.png);
-    background-size: cover;       
-    /*  always fit the view window  */
-    background-position: top;
-    /*    top of the back img stay still  */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
-    /*  URL: css clip path maker  */
-    
-    position: relative;
-}
-
-/* 
-**
-7.10: center * in CSS using transform, top, left properties
-**
-*/
-.header__logo-box {
-    position: absolute;
-    /*  relative to the nearest positioned ancestor  */
-/*
-    top: 40px;
-    left: 40px;
-*/
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-/*    height: 35px;*/
-    height: 3.5rem;
-}
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*  shift to left and top by 50% of the element itself  */
-    text-align: center;
-    /*  set the text (and inline element) to be at center */
-}
-
-.heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    /*  ????get rid of the ending animation  */
-
-}
-.heading-primary--main {
-    display: block;
-/*    font-size: 60px;*/
-    font-size: 6rem;
-/*    font-weight: 20rem;*/
-/*    letter-spacing: 10px;*/
-    letter-spacing: 1rem;
-
-    font-family: '8BITWONDERNominal';
-    font-weight: normal; 
-    font-style: normal; 
-  
-
-    
-    /*  animation  */
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-/*    animation-timing-function: ease-in;*/
-    /*  in fast  */
-}
-
-.heading-primary--sub {
-    display: block;
-/*    font-size: 20px;*/
-    font-size: 2rem;
-    font-weight: 400;
-/*    letter-spacing: 8px;*/
-    letter-spacing: .8rem;
-    
-    /*  animation  */
-    animation-name: moveInRight;
-    animation-duration: 2s;
-/*    animation-iteration-count: 3;*/
-    
-}
-
-/* 
-**
-7.10: css: @keyframe & animation property
-**
-*/
-
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translate(-100%);
-        transform: rotate(-180deg);
-    }
-    70% {
-        opacity: 0.5;
-        transform: translate(1.5rem);
-        transform: rotate(60deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translate(100%);
-    }
-    70% {
-        opacity: 0.5;
-        transform: translate(1rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-.header__logo:hover {
-    animation: moveInLeft 1s ease-out;
-}
-
-
-/* 
-**
-7.11: css: peseudo-classes & pseudo-elements
-*          :hover  pseudo-class
-*          ::after pseudo-element
-**
-*/
-
-/* this is the initial state */
-.btn:link,
-.btn:visited {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    transition: all .2s;        
-    /*  transition: duration of the animation; shorthand of animation
-        has to be in the initial state  */
-    position: relative;    
-    /*  relative to the after   */
-}
-/* link: a special state of a selector when it is ancher */
-/* visited: text become purple from blue */
-
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-    border-radius: 8rem;
-    margin-top: 4rem;
-}
-
-/* transform is related to the initial link state */
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
-
-/* transform is related to the initial link state */
-.btn:active {
-    transform: translateY(-.1rem);
-    box-shadow: 0 .5rem .5rem rgba(0,0,0,.2);
-}
-
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 8rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /*  make it behind the btn  */
-    
-    transition: all .4s;
-}
-.btn--white::after {
-    background-color: $color-white;
-}
-
-
-/* pseudo-element: after
-   when we hover the btn, we want sth to happen after*/
-/* we want the pseudo-element grows and fade out*/
-/* initial state is the .btn::after peseudo-element */
-.btn:hover::after {
-/*    transform: scale(1.5);*/
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-
-}
-
-/* btm appear animation */
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    30% {
-        opacity: 0.2;
-        transform: translateY(50%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.btn--animated {
-    animation: moveInBottom 0.8s ease-out 0.75s;
-    /*                    duration        delay  */
-    animation-fill-mode: backwards;
-    /*  auto set the animation to 0%/initial state before the animation starts  */
-}
-
+@import "pages/home";
 
 
 /* 
@@ -288,8 +26,12 @@ body {
 **    
 */
 
-
 /**
 *
 7.28: SCSS
+
+8.12: CSS seperately capsulation
 */
+
+
+
