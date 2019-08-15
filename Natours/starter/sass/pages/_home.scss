@@ -1,5 +1,18 @@
 .section-about {
-    background-color: $color-section-about;
-    padding: 25rem 0;
+    background-color: $color-section-light-yellow;
+    padding: 20rem 0 10rem 0;
     margin-top: -25vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    //    background-size: auto;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        /*        url(../img/hero.jpg);*/
+        url(../img/bg2.png);
+    background-size: cover;
+    /*  always fit the view window  */
+    background-position: top;
 }

@@ -1,100 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/icon-font.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
-        
-        <title>Natours | Exciting tours for adventurous people</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__logo-box">
-<!--                <img src="img/logo-white.png" alt="Logo" class="logo">-->
-                <img src="img/logo.png" alt="Logo" class="header__logo">
-            </div>
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">cooler coding</span>
-                    <span class="heading-primary--sub">communicate to the future</span>
-                </h1>
-                <a href="#" class="btn btn--white btn--animated">More about us</a>
-            </div>
-        </header>
-        
-        <!--    8.13 about section    -->
-        <main>
-            <section class="section-about">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css" />
+
+    <title>Natours | Exciting tours for adventurous people</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <!--                <img src="img/logo-white.png" alt="Logo" class="logo">-->
+            <img src="img/logo.png" alt="Logo" class="header__logo">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">cooler coding</span>
+                <span class="heading-primary--sub">communicate to the future</span>
+            </h1>
+            <a href="#" class="btn btn--white btn--animated">coming soon...</a>
+        </div>
+    </header>
+
+    <!--    8.13 about section    -->
+    <main>
+        <section class="section-about">
+            <div class="u-center-text u-margin-bottom-l">
                 <h2 class="heading-secondary">
-                    take a tour of CC
+                    Section about (base/typograph.scss)
                 </h2>
-            </section>
-        </main>
-        <!--    8.12 Grid system    -->
-        <section class="grid-test">
-           <div class="row">
-               <div class="col11">
-                   col1 of 1
-               </div>
-               <div class="col11">
-                   col2 of 1
-               </div>
-               <div class="col11">
-                   col3 of 1
-               </div>
-           </div>
-           <div class="row">
-               <div class="col12">
-                   col1 of 2
-               </div>
-               <div class="col22">
-                   col2 of 2
-               </div>
-           </div>
-           <div class="row">
-               <div class="col13">
-                   col1 of 3
-               </div>
-               <div class="col13">
-                   col2 of 3
-               </div>
-               <div class="col13">
-                   col3 of 3
-               </div>
-             </div>   
-           <div class="row">
-               <div class="col14">
-                   col1 of 4
-               </div>
-               <div class="col14">
-                   col2 of 4
-               </div>
-               <div class="col14">
-                   col3 of 4
-               </div>
-               <div class="col14">
-                   col4 of 4
-               </div>
-             </div>
-           <div class="row">
-               <div class="col15">
-                   col1 of 5
-               </div>
-               <div class="col15">
-                   col2 of 5
-               </div>
-               <div class="col15">
-                   col3 of 5
-               </div>
-             </div> 
+            </div>
+            <div class="row">
+                <div class="col11">
+                    <h3 class="heading-tertiary u-margin-bottom-s">乐学计划</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur fugiat sunt similique molestias quaerat aliquid recusandae voluptatum ipsam laboriosam, reiciendis autem minus tenetur quo, mollitia animi consequuntur eligendi. Delectus, voluptate.
+                    </p>
+                    <h3 class="heading-tertiary u-margin-bottom-s">酷学计划</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat officia quia nobis velit adipisci. Tempore nulla maxime laboriosam qui, molestias, iste architecto dolorem deserunt ab temporibus ipsa illum? Exercitationem, veritatis.
+                    </p>
+                    <a href="#" class="btn-text">more info &rarr;</a>
+                </div>
+                <div class="col11">
+                    <div class="composition">
+                        <img src="img/nat-1-large.jpg" alt="img1" class="composition__photo composition__photo--p1">
+                        <img src="img/nat-2-large.jpg" alt="img2" class="composition__photo composition__photo--p2">
+                        <img src="img/nat-3-large.jpg" alt="img3" class="composition__photo composition__photo--p3">
+                    </div>
+                </div>
+            </div>
         </section>
-        
-    </body>
+        <section class="section-features">
+            <div class="row">
+                <div class="col14">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-globe"></i>
+                        <h3 class="heading-tertiary">feature_box1</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam vel, veniam. Tenetur neque repellendus commodi minus adipisci quo illum esse quasi numquam.
+                        </p>
+                    </div>
+                </div>
+                <div class="col14">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">feature_box2</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum suscipit, in molestias inventore officia assumenda natus, nostrum nisi hic ad sequi.
+                        </p>
+                    </div>
+                </div>
+                <div class="col14">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-robot"></i>
+                        <h3 class="heading-tertiary">feature_box3</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur, mollitia, vel cupiditate nulla labore officiis voluptatibus odio qui incidunt.
+                        </p>
+                    </div>
+                </div>
+                <div class="col14">
+                    <div class="feature-box">
+                        <i class="feature-box__icon fas fa-graduation-cap"></i>
+                        <h3 class="heading-tertiary">feature_box4</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus, illo vitae perspiciatis maxime inventore fuga accusamus dolores debitis reiciendis!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--    8.12 Grid system    -->
+    <section class="grid-test">
+        <div class="row">
+            <div class="col11">
+                col1 of 1
+            </div>
+            <div class="col11">
+                col2 of 1
+            </div>
+            <div class="col11">
+                col3 of 1
+            </div>
+        </div>
+        <div class="row">
+            <div class="col12">
+                col1 of 2
+            </div>
+            <div class="col22">
+                col2 of 2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col13">
+                col1 of 3
+            </div>
+            <div class="col13">
+                col2 of 3
+            </div>
+            <div class="col13">
+                col3 of 3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col14">
+                col1 of 4
+            </div>
+            <div class="col14">
+                col2 of 4
+            </div>
+            <div class="col14">
+                col3 of 4
+            </div>
+            <div class="col14">
+                col4 of 4
+            </div>
+        </div>
+        <div class="row">
+            <div class="col15">
+                col1 of 5
+            </div>
+            <div class="col15">
+                col2 of 5
+            </div>
+            <div class="col15">
+                col3 of 5
+            </div>
+        </div>
+    </section>
+
+</body>
+
 </html>

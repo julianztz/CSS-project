@@ -1,3 +1,4 @@
+// heading, body, footer...
 /* 
 * 8.11 scss: encapsulate
 */
@@ -51,13 +52,34 @@ body {
     font-weight: 700;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text;        // text color gradient effect
     color:transparent;
     letter-spacing: .2rem;
     transition: all .2s;
     
     &:hover {
-        transform: shewY(2deg);
+//        opacity: 0.5;
+        transform: skewY(2deg) skewx(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
     
 }
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+
+
+
