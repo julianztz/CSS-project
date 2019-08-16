@@ -169,6 +169,13 @@ body {
     margin-top: 4rem; }
     .btn--white::after {
       background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff;
+    border-radius: 8rem;
+    margin-top: 10rem; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -266,7 +273,6 @@ body {
   position: relative;
   height: 35rem; }
   .card__c {
-    background-color: orangered;
     height: 45rem;
     transition: all .8s ease;
     position: absolute;
@@ -301,9 +307,9 @@ body {
     .card__pic--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-5.jpg); }
     .card__pic--2 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/nat-6.jpg); }
     .card__pic--3 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)), url(../../img/nat-7.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -320,6 +326,10 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
   .card__contents ul {
     list-style: none;
     margin: 1rem auto;
@@ -330,6 +340,23 @@ body {
       padding: 1rem; }
       .card__contents ul li:not(:last-child) {
         border-bottom: 1px solid #f2f2f2; }
+  .card__backcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__backcombo {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 4rem; }
+    .card__backcombo-price {
+      font-size: 1.4rem;
+      text-transform: uppercase; }
+    .card__backcombo-value {
+      font-size: 6rem;
+      font-weight: 100; }
 
 .row {
   max-width: 114rem;
@@ -405,7 +432,7 @@ body {
 
 .section-tours {
   background-color: #efe356;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 12rem 0;
   margin-top: -10rem; }
 
 /* 

@@ -29,6 +29,16 @@
         &::after {
             background-color: $color-white;
         }    
+    }    
+    
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 8rem;
+        margin-top: 10rem;
+        &::after {
+            background-color: $color-primary;
+        }    
     }
 
     /* pseudo-element: after
