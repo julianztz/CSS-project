@@ -260,6 +260,77 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspectice: 150rem;
+  position: relative;
+  height: 35rem; }
+  .card__c {
+    background-color: orangered;
+    height: 45rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+    .card__c--front {
+      background-color: #fff; }
+    .card__c--back {
+      background-color: green;
+      transform: rotateY(180deg); }
+      .card__c--back--1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      .card__c--back--2 {
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+      .card__c--back--3 {
+        background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card:hover .card__c--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__c--back {
+    transform: rotateY(0deg); }
+  .card__pic {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__pic--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-5.jpg); }
+    .card__pic--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-6.jpg); }
+    .card__pic--3 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+  .card__contents ul {
+    list-style: none;
+    margin: 1rem auto;
+    width: 80%; }
+    .card__contents ul li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .card__contents ul li:not(:last-child) {
+        border-bottom: 1px solid #f2f2f2; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -297,6 +368,7 @@ body {
   /*  always fit the view window  */
   background-position: top;
   /*    top of the back img stay still  */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   /*  URL: css clip path maker  */
   position: relative; }
@@ -330,6 +402,11 @@ body {
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(5deg); }
+
+.section-tours {
+  background-color: #efe356;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem; }
 
 /* 
 **

@@ -298,6 +298,95 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+/* line 1, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+.card {
+  perspective: 150rem;
+  -moz-perspectice: 150rem;
+  position: relative;
+  height: 50rem; }
+  /* line 8, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card__c {
+    background-color: orangered;
+    height: 45rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+    /* line 24, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__c--front {
+      background-color: #fff; }
+    /* line 28, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__c--back {
+      background-color: green;
+      transform: rotateY(180deg); }
+      /* line 32, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+      .card__c--back--1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      /* line 38, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+      .card__c--back--2 {
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+      /* line 44, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+      .card__c--back--3 {
+        background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  /* line 54, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card:hover .card__c--front {
+    transform: rotateY(-180deg); }
+  /* line 58, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card:hover .card__c--back {
+    transform: rotateY(0deg); }
+  /* line 63, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card__pic {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    /* line 70, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__pic--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-5.jpg); }
+    /* line 75, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__pic--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-6.jpg); }
+    /* line 80, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__pic--3 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../../img/nat-7.jpg); }
+  /* line 87, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    width: 75%; }
+  /* line 98, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    /* line 102, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+  /* line 110, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+  .card__contents ul {
+    list-style: none;
+    margin: 1rem auto; }
+    /* line 114, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+    .card__contents ul li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      /* line 118, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_tourcards.scss */
+      .card__contents ul li:not(:last-child) {
+        border-bottom: 1px solid #777; }
+
 /* line 1, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_grid.scss */
 .row {
   max-width: 114rem;
@@ -347,17 +436,18 @@ body {
   /*  always fit the view window  */
   background-position: top;
   /*    top of the back img stay still  */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   /*  URL: css clip path maker  */
   position: relative; }
-  /* line 22, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 23, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__logo-box {
     top: 4rem;
     left: 4rem; }
-  /* line 26, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 27, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__logo {
     height: 3.5rem; }
-  /* line 30, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 31, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -366,7 +456,7 @@ body {
     /*  shift to left and top by 50% of the element itself  */
     text-align: center;
     /*  set the text (and inline element) to be at center */ }
-  /* line 39, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 40, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__logo:hover {
     animation: moveInLeft 1s ease-out; }
 
@@ -387,6 +477,12 @@ body {
   /* line 19, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
   .section-features > * {
     transform: skewY(5deg); }
+
+/* line 25, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+.section-tours {
+  background-color: #efe356;
+  padding: 25rem 0 50rem 0;
+  margin-top: -10rem; }
 
 /* 
 **
