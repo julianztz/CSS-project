@@ -139,19 +139,19 @@ body {
 
 /* line 2, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_utilities.scss */
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 /* line 6, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_utilities.scss */
 .u-margin-bottom-l {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 /* line 9, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_utilities.scss */
 .u-margin-bottom-m {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 /* line 12, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_utilities.scss */
 .u-margin-bottom-s {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 /* 
 * 8.11 scss: encapsulate
@@ -168,7 +168,7 @@ body {
   /* transform is related to the initial link state */
   /* transform is related to the initial link state */ }
   /* line 7, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
-  .btn:link, .btn:visited {
+  .btn, .btn:link, .btn:visited {
     font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -179,39 +179,48 @@ body {
     /*  transition: duration of the animation; shorthand of animation
             has to be in the initial state  */
     position: relative;
-    /*  relative to the after   */ }
-  /* line 24, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    /*  relative to the after   */
+    border: none;
+    cursor: pointer; }
+  /* line 30, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
   .btn--white {
     background-color: #fff;
     color: #777;
     border-radius: 8rem;
     margin-top: 4rem; }
-    /* line 29, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    /* line 35, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
     .btn--white::after {
       background-color: #fff; }
-  /* line 34, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+  /* line 40, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
   .btn--green {
     background-color: #55c57a;
     color: #fff;
     border-radius: 8rem;
-    margin-top: 10rem; }
-    /* line 39, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    margin-top: 5rem; }
+    /* line 45, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
     .btn--green::after {
       background-color: #55c57a; }
-  /* line 49, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    /* line 48, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    .btn--green_s {
+      margin-top: 3rem; }
+    /* line 52, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    .btn--green_l {
+      margin-top: 8rem; }
+  /* line 62, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
   .btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    /* line 52, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+    /* line 65, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
     .btn:hover::after {
       /*    transform: scale(1.5);*/
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
-  /* line 60, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
-  .btn:active {
+  /* line 73, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+  .btn:active, .btn:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2); }
-  /* line 65, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+  /* line 80, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
   .btn::after {
     content: "";
     display: inline-block;
@@ -224,14 +233,14 @@ body {
     z-index: -1;
     /*  make it behind the btn  */
     transition: all .4s; }
-  /* line 80, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+  /* line 95, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
   .btn--animated {
     animation: moveInBottom 0.8s ease-out 0.75s;
     /*                    duration        delay  */
     animation-fill-mode: backwards;
     /*  auto set the animation to 0%/initial state before the animation starts  */ }
 
-/* line 90, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+/* line 105, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #55c57a;
@@ -240,14 +249,14 @@ body {
   border-bottom: 1px solid #55c57a;
   padding: 3px; }
 
-/* line 100, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+/* line 115, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
 .btn-text:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: translate(-2px); }
 
-/* line 107, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
+/* line 122, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_button.scss */
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translate(0); }
@@ -260,7 +269,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .35; }
+  opacity: .2; }
   /* line 10, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_bg-video.scss */
   .bg-video__content {
     height: 100%;
@@ -321,6 +330,95 @@ body {
   /* line 22, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_feature-box.scss */
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
+
+/* line 2, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+/* line 6, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transistion: all .3s; }
+  /* line 19, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a; }
+  /* line 25, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+  /* line 29, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+  .form__input::-webkit-input-placeholder {
+    color: #777; }
+
+/* line 35, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+/* line 43, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+/* line 49, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__radio-input {
+  display: none; }
+
+/* line 53, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__radio-group {
+  width: 48%;
+  display: inline-block; }
+
+/* line 57, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem; }
+
+/* line 64, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.3rem; }
+  /* line 75, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #55c57a;
+    opacity: 0;
+    transition: opacity .2s; }
+
+/* line 92, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_form.scss */
+.form__radio-input:checked ~ .form__radio-label .form__radio-button:after {
+  opacity: 1; }
 
 /* line 1, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/components/_stories.scss */
 .story {
@@ -575,20 +673,37 @@ body {
   /*  always fit the view window  */
   transform: skewY(-5deg);
   margin-top: -10rem; }
-  /* line 19, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+  /* line 20, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
   .section-features > * {
     transform: skewY(5deg); }
 
-/* line 25, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+/* line 27, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
 .section-tours {
   background-color: #efe356;
   padding: 25rem 0 12rem 0;
   margin-top: -10rem; }
 
-/* line 32, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+/* line 34, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+
+/* line 40, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+.section-contact {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+/* line 45, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+.contact {
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  height: 50rem; }
+  /* line 55, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
+  .contact__form {
+    width: 50%;
+    padding: 6rem; }
 
 /* 
 **
