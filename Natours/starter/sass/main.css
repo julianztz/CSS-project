@@ -1,3 +1,7 @@
+/*
+ * 8.19 Responsive Web Design
+ *      media query manager
+ */
 /* $color-background: rgba(50, 150, 200, 0.8); */
 /* 
 **
@@ -51,17 +55,34 @@
   /*****inheritance*****/
   /*  box-sizing was not inherited; now it is by forcing  */ }
 
-/* line 13, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+/* line 14, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
 html {
   /*    font-size: 10px;        */
   /*  now 10px=1rem (root font size)  */
   font-size: 62.5%;
-  /*  default: 16px
-        we want 10px(relatively), we use 10/16 here*/ }
+  /*  default: 16px;    we want 10px(relatively), we use 10/16 here*/ }
+  @media (max-width: 75em) {
+    /* line 14, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    /* line 14, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    /* line 14, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+    html {
+      font-size: 75%; } }
 
-/* line 21, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+/* line 36, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  /*  margin VS padding??  */ }
+  @media (max-width: 56.25em) {
+    /* line 36, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_base.scss */
+    body {
+      padding: 0; } }
 
 /* 
 * 8.11 scss: encapsulate
@@ -72,19 +93,21 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   /*  ????get rid of the ending animation  */ }
-  /* line 10, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+  /* line 12, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
   .heading-primary--main {
     display: block;
-    font-size: 6rem;
-    letter-spacing: 1rem;
-    font-family: '8BITWONDERNominal';
-    font-weight: normal;
-    font-style: normal;
+    margin: 3rem;
+    padding: 5rem;
     /*  animation  */
     animation-name: moveInLeft;
     animation-duration: 2s;
     /*  in fast  */ }
-  /* line 23, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+    @media (max-width: 56.25em) {
+      /* line 12, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+      .heading-primary--main {
+        letter-spacing: .5rem;
+        font-family: 5rem; } }
+  /* line 36, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -93,8 +116,12 @@ body {
     /*  animation  */
     animation-name: moveInRight;
     animation-duration: 2s; }
+    @media (max-width: 37.5em) {
+      /* line 36, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+      .heading-primary--sub {
+        letter-spacing: .4rem; } }
 
-/* line 35, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+/* line 52, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
 body {
   background-color: #ddd5d5;
   font-family: "Lato", sans-serif;
@@ -104,11 +131,9 @@ body {
   line-height: 1.7;
   /*  height of each line  */
   color: #777;
-  /*    padding: 30px;        */
-  padding: 3rem;
-  /*  margin VS padding??  */ }
+  /*    padding: 30px;        */ }
 
-/* line 49, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+/* line 64, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -119,21 +144,21 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
-  /* line 60, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+  /* line 75, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
   .heading-secondary:hover {
     transform: skewY(2deg) skewx(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-/* line 68, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+/* line 83, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
 
-/* line 74, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+/* line 89, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
 .paragraph {
   font-size: 1.6rem; }
-  /* line 76, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
+  /* line 92, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/base/_typography.scss */
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -686,16 +711,12 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   /*  URL: css clip path maker  */
   position: relative; }
-  /* line 23, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
-  .header__logo-box {
-    top: 4rem;
-    left: 4rem; }
   /* line 27, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__logo {
-    width: 80rem;
+    width: 90rem;
     height: auto;
     margin-bottom: 3rem; }
-  /* line 33, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 37, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -704,7 +725,7 @@ body {
     /*  shift to left and top by 50% of the element itself  */
     text-align: center;
     /*  set the text (and inline element) to be at center */ }
-  /* line 42, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
+  /* line 46, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_header.scss */
   .header__logo:hover {
     animation: moveInLeft 1s ease-out; }
 
@@ -721,9 +742,12 @@ body {
   top: 6rem;
   right: 6rem;
   border-radius: 50%;
-  z-index: 200; }
+  z-index: 200;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
 
-/* line 17, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+/* line 22, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -733,34 +757,109 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 100;
-  transform: scale(50); }
+  transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1); }
 
-/* line 31, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+/* line 38, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
 .navigation__nav {
   height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 150; }
+  z-index: 150;
+  width: 0;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
-/* line 41, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+/* line 54, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
 .navigation__list {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
-/* line 51, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
-.navigation__link {
+/* line 61, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__item {
+  margin: 1rem; }
+
+/* line 67, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
   font-size: 3rem;
   font-weight: 300;
+  padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, orange 0%, orange 50%, white 50%); }
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  transition: all .4s; }
+  /* line 79, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+  .navigation__link:link span, .navigation__link:visited span {
+    margin-right: 1.5rem;
+    display: inline-block; }
+
+/* line 85, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
+
+/* line 95, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+/* line 98, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+/* line 104, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem; }
+  /* line 108, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #777;
+    display: inline-block; }
+  /* line 116, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  /* line 124, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+  .navigation__icon::before {
+    top: -.8rem; }
+  /* line 127, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+  .navigation__icon::after {
+    top: .8rem; }
+
+/* line 133, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+/* line 136, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+/* line 141, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+/* line 144, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+/* line 148, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
 
 /* line 1, /Users/tianzhizhu/Documents/JulianDailyJS/CSS-project/Natours/starter/sass/pages/_home.scss */
 .section-about {

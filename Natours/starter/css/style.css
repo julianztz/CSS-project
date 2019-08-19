@@ -1,3 +1,7 @@
+/*
+ * 8.19 Responsive Web Design
+ *      media query manager
+ */
 /* $color-background: rgba(50, 150, 200, 0.8); */
 /* 
 **
@@ -54,11 +58,24 @@ html {
   /*    font-size: 10px;        */
   /*  now 10px=1rem (root font size)  */
   font-size: 62.5%;
-  /*  default: 16px
-        we want 10px(relatively), we use 10/16 here*/ }
+  /*  default: 16px;    we want 10px(relatively), we use 10/16 here*/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  /*  margin VS padding??  */ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /* 
 * 8.11 scss: encapsulate
@@ -70,15 +87,16 @@ body {
   /*  ????get rid of the ending animation  */ }
   .heading-primary--main {
     display: block;
-    font-size: 6rem;
-    letter-spacing: 1rem;
-    font-family: '8BITWONDERNominal';
-    font-weight: normal;
-    font-style: normal;
+    margin: 3rem;
+    padding: 5rem;
     /*  animation  */
     animation-name: moveInLeft;
     animation-duration: 2s;
     /*  in fast  */ }
+    @media (max-width: 56.25em) {
+      .heading-primary--main {
+        letter-spacing: .5rem;
+        font-family: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -87,6 +105,9 @@ body {
     /*  animation  */
     animation-name: moveInRight;
     animation-duration: 2s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .4rem; } }
 
 body {
   background-color: #ddd5d5;
@@ -97,9 +118,7 @@ body {
   line-height: 1.7;
   /*  height of each line  */
   color: #777;
-  /*    padding: 30px;        */
-  padding: 3rem;
-  /*  margin VS padding??  */ }
+  /*    padding: 30px;        */ }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -575,11 +594,8 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%);
   /*  URL: css clip path maker  */
   position: relative; }
-  .header__logo-box {
-    top: 4rem;
-    left: 4rem; }
   .header__logo {
-    width: 80rem;
+    width: 90rem;
     height: auto;
     margin-bottom: 3rem; }
   .header__text-box {

@@ -20,14 +20,18 @@
     /*  URL: css clip path maker  */
     
     position: relative;
-    &__logo-box{
-        top: 4rem;
-        left: 4rem;
-    }
+//    &__logo-box{
+//        top: 4rem;
+//        left: 4rem;
+//    }
     &__logo {
-        width: 80rem;
+//        background-image: url(../../img/Cooler-Coding.png);
+////        background-size: 120rem 10rem;
+//        background-position: top;
+        width: 90rem;
         height: auto;
         margin-bottom: 3rem;
+        
     }
 
     &__text-box {
